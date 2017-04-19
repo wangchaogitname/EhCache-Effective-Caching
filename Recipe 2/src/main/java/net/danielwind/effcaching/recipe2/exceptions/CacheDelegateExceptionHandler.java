@@ -10,6 +10,7 @@ public class CacheDelegateExceptionHandler implements CacheExceptionHandler {
 	private static final Logger log = Logger.getLogger(CacheDelegateExceptionHandler.class);
 	
 	/*** Uncomment this line if you are using declarative factories configuration ***/
+	/*** 如果你使用的声明工厂配置取消此行注释 ***/
 	// public static final CacheDelegateExceptionHandler INSTANCE = new CacheDelegateExceptionHandler();
 	
 	public CacheDelegateExceptionHandler() {

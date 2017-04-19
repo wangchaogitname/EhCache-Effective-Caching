@@ -36,7 +36,7 @@ public final class CacheDelegate {
 	}
 	
 	/**
-	 * Loads a Person list in Cache Layer
+	 * Loads a Person list in Cache Layer 加载缓存层中的人员列表
 	 * @param people: List of Multiple Person Objects 
 	 */
 	public void loadInCache(List<Person> people) {
@@ -46,6 +46,7 @@ public final class CacheDelegate {
 		if(personListSize > 0){
 			
 			//proceed filling cache layer with all employees
+			//继续填充所有员工的缓存层
 			for(int i = 0; i < personListSize; i++){
 				cache.put(new Element((i + 1), people.get(i)));
 			}
@@ -54,6 +55,7 @@ public final class CacheDelegate {
 	
 	/**
 	 * Loads a single Person instance in cache
+	 * 缓存中加载单个Person实例
 	 * @param person
 	 * 		  A Person Object	
 	 */
@@ -63,6 +65,7 @@ public final class CacheDelegate {
 	
 	/**
 	 * Method for getting the current Cache instance that is active
+	 * 获取当前活动的Cache实例的方法
 	 * @return EhCache Cache instance
 	 */
 	public Cache getCache() {
@@ -72,6 +75,7 @@ public final class CacheDelegate {
 	
 	/**
 	 * Clear cache layer (Simple removal, non-clustered)
+	 * 清除缓存层（简单删除，非群集）
 	 */
 	public void emptyCache() {
 		cache.removeAll();

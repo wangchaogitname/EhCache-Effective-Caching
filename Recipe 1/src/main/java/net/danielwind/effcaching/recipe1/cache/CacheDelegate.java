@@ -33,8 +33,8 @@ public final class CacheDelegate {
 		 ****/
 		//configureCacheProgramatically();
 		
-		manager = new CacheManager(EHCACHE_CONFIG);
-		cache = manager.getCache(CACHE_NAME);
+		this.manager = new CacheManager(EHCACHE_CONFIG);
+		this.cache = this.manager.getCache(CACHE_NAME);
 	}
 	
 	/**
@@ -59,10 +59,10 @@ public final class CacheDelegate {
 		cacheManagerConfiguration.addCache(cacheConfiguration);
 		
 		//update global class level Cache Manager
-		manager = new CacheManager(cacheManagerConfiguration);
+		this.manager = new CacheManager(cacheManagerConfiguration);
 		
 		//get final cache object
-		cache = manager.getEhcache("objectCache");
+		this.cache = this.manager.getEhcache("objectCache");
 	}
 	
 	/**
@@ -73,7 +73,7 @@ public final class CacheDelegate {
 		
 		//proceed filling cache layer with all countries
 		for(int i = 0; i < countries.size(); i++){
-			cache.put(new Element((i + 1), countries.get(i)));
+			this.cache.put(new Element((i + 1), countries.get(i)));
 		}
 	}
 	
@@ -87,8 +87,8 @@ public final class CacheDelegate {
 		log.info("--- Retrieving Key Elements List ---");
 		log.info("------------------------------------");
 		
-		for(Object element: cache.getKeys()){
-			log.info("key: " + element + ", element: " + cache.get(element));
+		for(Object element: this.cache.getKeys()){
+			log.info("key: " + element + ", element: " + this.cache.get(element));
 		}
 	}
 

@@ -19,10 +19,10 @@ public final class Main {
 		//load car list
 		List<Car> carList = new JsonUtil().parseFile();
 
-		//create cache delegate instance
+		//create cache delegate instance 创建缓存委托实例
 		CacheDelegate cache = new CacheDelegate();
 		
-		//load initial data in cache
+		//load initial data in cache 加载缓存中的初始数据
 		cache.initializeLoadCache(carList);
 		
 		//--------- Perform operations ---------//

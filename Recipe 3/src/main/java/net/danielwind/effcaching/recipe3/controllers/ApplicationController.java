@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Controller
+@RequestMapping("/")
 public final class ApplicationController {
 	
 	@Autowired
@@ -28,12 +29,12 @@ public final class ApplicationController {
 	
 	private static final Logger log = Logger.getLogger(ApplicationController.class);
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/")
+	@RequestMapping(method = RequestMethod.GET, value = "index")
 	public String index(Model model) {
 		return "index";
 	}
 	
-	@RequestMapping(method = RequestMethod.POST, value="/list/employees")
+	@RequestMapping(method = RequestMethod.POST, value="list/employees")
 	@ResponseStatus(HttpStatus.OK)
 	public void invokeEmployeeList(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		

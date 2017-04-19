@@ -33,6 +33,7 @@ public class Main {
 		log.info("////////////////////////////////////////////////");
 		
 		//start eviction process (insert one more item to cause cache to evict some element)
+		//开始排除过程（再插入一个项目导致缓存排除某些元素）
 		Person person = new Person("Donald", "Trump", "dtrump@enterprise.com", "US", "21-31432-01239");
 		log.debug("*** Loading one more Person in cache: " + person.toString() + " ***");
 		cache.loadSingleItemInCache(person);

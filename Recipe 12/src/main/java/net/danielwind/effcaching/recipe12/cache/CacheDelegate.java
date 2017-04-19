@@ -26,11 +26,13 @@ public final class CacheDelegate {
 		blockingCache = new BlockingCache(cache);
 		
 		//replace default cache with decorated cache (Blocking Cache)
+		//将默认缓存替换为装饰缓存（Blocking Cache）
 		manager.replaceCacheWithDecoratedCache(cache, blockingCache);
 	}
 	
 	/**
 	 * Saves a message in cache layer. Currently just one value.
+	 * 在缓存层中保存一条消息。目前只有一个值。
 	 * @param message a Message object
 	 */
 	public void saveMessageInCache(Message message) {

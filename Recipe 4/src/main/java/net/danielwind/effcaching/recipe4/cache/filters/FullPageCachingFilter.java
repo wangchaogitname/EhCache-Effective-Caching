@@ -26,6 +26,9 @@ public class FullPageCachingFilter extends CachingFilter {
 	 * You can override this method and do your own key calculation. For example,
 	 * you could create an specific URL parameter and read it here to determine caching.
 	 * In this case, we are reading the entire URL + query strings.
+	 * 你可以覆盖此方法并进行自己的密钥计算。 例如，
+	 * 你可以创建一个特定的URL参数，并在此处阅读以确定缓存。 
+	 * 在这种情况下，我们正在阅读整个URL +查询字符串。
 	 */
 	@Override
 	protected String calculateKey(HttpServletRequest httpRequest) {
@@ -45,6 +48,7 @@ public class FullPageCachingFilter extends CachingFilter {
 	
 	/**
 	 * Overriding this method's functionality to add simple logging.
+	 * 覆盖此方法的功能以添加简单的日志记录。
 	 */
 	@Override
 	protected void writeContent(final HttpServletRequest request,

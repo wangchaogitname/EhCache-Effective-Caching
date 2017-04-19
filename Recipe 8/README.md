@@ -1,7 +1,9 @@
 ####EhCache Effective Caching: How-To
-##Recipe 8 (Out-Of-Process Distributed Caching)
+##Recipe 8 (Out-Of-Process Distributed Caching 进程外分布式缓存)
 
 In this recipe you will be shown how to setup a RESTful Cache Server for distributed caching. EhCache provides a server module that allows developers to easily create a distributed cache architecture. 
+在此recipe中，您将会看到如何为分布式缓存设置RESTful缓存服务器。
+EhCache提供了一个服务器模块，允许开发人员轻松创建分布式缓存架构。
 
 ######Errata: [http://www.danielwind.net](http://www.danielwind.net/effcaching/errata)
 

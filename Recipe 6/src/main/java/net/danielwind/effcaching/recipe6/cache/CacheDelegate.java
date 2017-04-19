@@ -83,6 +83,8 @@ public final class CacheDelegate {
 	/**
 	 * Searches an Employee that comply with the social security number criteria.
 	 * This is a simple example of a SELECT-like search query using a String parameter.
+	 * 搜索与社会安全号码符合标准的员工。
+	 * 这是使用一个字符串参数的SELECT状搜索查询的一个简单的例子。
 	 * @param socialNumber
 	 * @return
 	 */
@@ -91,7 +93,7 @@ public final class CacheDelegate {
 		
 		Employee employee = null;
 		
-		//create EhCache Search API Query
+		//create EhCache Search API Query 创建的Ehcache搜索API查询
 		Query query = cache.createQuery();
 		query.includeKeys();
 		query.includeValues();
@@ -103,6 +105,7 @@ public final class CacheDelegate {
 		query.addCriteria(attribute.eq(socialNumber));
 		
 		//get the results list and loop on them (only one result for this query)
+		//获取对他们的结果列表和循环（此查询只有一个结果）
 		Results results = query.execute();
 		
 		for(Result result : results.all()){
@@ -125,6 +128,8 @@ public final class CacheDelegate {
 	 * Searches a list of Employees that comply with the role criteria.
 	 * This is a simple example of a SELECT-like search query but this 
 	 * time using an Enumeration as search parameter. 
+	 * 搜索符合角色标准的员工名单。 
+	 * 这是一个类似SELECT的搜索查询的简单示例，但这次使用枚举作为搜索参数。
 	 * @param role
 	 * @return
 	 */
@@ -165,6 +170,8 @@ public final class CacheDelegate {
 	 * Searches a list of Employees that comply with the salary condition criteria.
 	 * This example shows how to do conditional operations (>, <, =) on queries as
 	 * well as how to sort by descending order. 
+	 * 搜索符合薪资条件标准的员工名单。 
+	 * 此示例显示如何对查询执行条件操作（>，<，=）以及如何按降序排序。
 	 * @param range
 	 * @return
 	 */
@@ -205,6 +212,8 @@ public final class CacheDelegate {
 	 * Returns salary average for all employees in cache layer. This
 	 * example shows how to perform an Aggregation function in a search
 	 * query, like SQL select avg(salary) from Employee.
+	 * 返回缓存层中所有员工的工资平均值。 
+	 * 此示例显示了如何在搜索查询中执行聚合功能，例如来自Employee的SQL select avg（salary）。
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")

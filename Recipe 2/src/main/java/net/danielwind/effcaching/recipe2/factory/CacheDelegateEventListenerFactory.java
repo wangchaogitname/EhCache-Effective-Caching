@@ -14,6 +14,7 @@ public class CacheDelegateEventListenerFactory extends
 	@Override
 	public CacheEventListener createCacheEventListener(Properties properties) {
 		/*** uncomment line if declarative configuration is used ***/
+		/*** 如果使用声明式配置，则取消注释行***/
 		//return CacheDelegateEventListener.INSTANCE;
 		return null;
 	}

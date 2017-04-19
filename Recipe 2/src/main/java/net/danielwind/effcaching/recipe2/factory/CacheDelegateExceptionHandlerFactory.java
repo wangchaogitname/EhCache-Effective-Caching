@@ -16,6 +16,7 @@ public class CacheDelegateExceptionHandlerFactory extends
 	@Override
 	public CacheExceptionHandler createExceptionHandler(Properties properties) {
 		/*** uncomment line if declarative configuration is used ***/
+		/*** 如果使用声明式配置，则取消注释行***/
 		//return CacheDelegateExceptionHandler.INSTANCE;
 		return null;
 	}
